@@ -1,0 +1,148 @@
+/* ---------- Base ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --c-primary: #0ea5e9;
+  --c-primary-dark: #0284c7;
+  --c-dark: #0f172a;
+  --c-bg: #f1f6f9;
+  --c-card: #fff;
+  --radius: 0.75rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--c-bg);
+  color: var(--c-dark);
+}
+
+h1, h2 { margin: 0 0 0.75rem; font-weight: 600; }
+p      { margin: 0 0 1rem; }
+
+.container { max-width: 1140px; margin: 0 auto; padding: 0 1rem; }
+
+/* ---------- Nav ---------- */
+.site-header {
+  background: #0f766e;
+  color: #fff;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a { color: #fff; text-decoration: none; font-weight: 500; }
+
+/* ---------- Split Wrapper ---------- */
+.split-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--c-card);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+}
+
+/* Contact form fields */
+.form-card label {
+  display: block;
+  margin-bottom: 1rem;
+}
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid #94a3b8;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  margin-top: 0.35rem;
+}
+.form-card input:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: var(--c-primary-dark);
+}
+.form-card button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--c-primary);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.form-card button:hover { background: var(--c-primary-dark); }
+.form-msg { font-size: 0.9rem; margin-top: 0.75rem; }
+
+/* To-do list */
+.todo-form {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.todo-form input {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid var(--c-primary-dark);
+  border-radius: var(--radius);
+}
+.todo-form button {
+  padding: 0 1rem;
+  background: var(--c-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.todo-list {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.todo-list li {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.6rem;
+}
+.todo-list li button {
+  background: transparent;
+  border: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #dc2626;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #0f766e;
+  color: #fff;
+}
+
+/* ---------- (Optional) small-screen stacking ---------- */
+@media (max-width: 760px) {
+  .split-wrapper { grid-template-columns: 1fr; }
+}
